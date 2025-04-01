@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const stats = [
   { number: "$2.4M+", label: "Capital Deployed" },
@@ -10,14 +11,22 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="bg-white py-12 sm:py-16">
+    <section className="bg-white py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Our Impact</h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Empowering women entrepreneurs globally through financial inclusion and support.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-empowerher-600">{stat.number}</div>
-              <div className="mt-2 text-base text-gray-600">{stat.label}</div>
-            </div>
+            <Card key={index} className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="text-4xl md:text-5xl font-bold text-empowerher-600 mb-2">{stat.number}</div>
+                <div className="text-base text-gray-600">{stat.label}</div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
