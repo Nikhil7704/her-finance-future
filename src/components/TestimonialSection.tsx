@@ -38,9 +38,9 @@ const TestimonialSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="empowerher-card bg-white">
-              <CardContent className="p-6">
-                <div className="h-32">
+            <Card key={index} className="empowerher-card bg-white h-full flex flex-col">
+              <CardContent className="p-6 flex flex-col justify-between h-full">
+                <div className="mb-6">
                   <svg
                     className="h-12 w-12 text-empowerher-200 opacity-50 mb-4"
                     fill="currentColor"
@@ -49,9 +49,9 @@ const TestimonialSection = () => {
                   >
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
-                  <p className="text-gray-700 text-lg italic">{testimonial.quote}</p>
+                  <p className="text-gray-700 text-lg italic line-clamp-6">{testimonial.quote}</p>
                 </div>
-                <div className="mt-6 flex items-center">
+                <div className="mt-auto flex items-center">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
                     src={testimonial.imageSrc}
