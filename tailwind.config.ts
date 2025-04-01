@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,32 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				empowerher: {
+					50: '#f0f8ff',
+					100: '#e0f1fe',
+					200: '#bae3fd',
+					300: '#7dcdfc',
+					400: '#36acf7',
+					500: '#0e96e9',
+					600: '#0078cc',
+					700: '#0160a7',
+					800: '#065288',
+					900: '#0c4470',
+					950: '#082b4b',
+				},
+				coral: {
+					50: '#fff1f0',
+					100: '#ffe0dd',
+					200: '#ffc7c1',
+					300: '#ffa096',
+					400: '#ff6a59',
+					500: '#ff3c27',
+					600: '#f01c06',
+					700: '#c71303',
+					800: '#a31307',
+					900: '#86150c',
+					950: '#490702',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +111,24 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
+				'fade-up': {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.7s ease-out'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
 			}
 		}
 	},
