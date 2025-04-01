@@ -19,11 +19,11 @@ const StatsSection = () => {
             Empowering women entrepreneurs globally through financial inclusion and support.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
-            <Card key={index} className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl md:text-5xl font-bold text-empowerher-600 mb-2">{stat.number}</div>
+            <Card key={index} className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300 h-full">
+              <CardContent className="p-6 text-center flex flex-col justify-center items-center h-full">
+                <div className="text-4xl md:text-5xl font-bold text-empowerher-600 mb-3">{stat.number}</div>
                 <div className="text-base text-gray-600">{stat.label}</div>
               </CardContent>
             </Card>
