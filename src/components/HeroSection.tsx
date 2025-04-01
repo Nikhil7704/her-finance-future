@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, CheckCircle } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToFeatures = () => {
@@ -48,19 +48,19 @@ const HeroSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-empowerher-900/50 to-transparent opacity-60"></div>
               </div>
-              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-xl shadow-lg p-4 w-48 animate-fade-up">
+              
+              {/* Funding Approved Card */}
+              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-xl shadow-lg p-4 w-52 animate-fade-up">
                 <div className="flex items-center space-x-2">
-                  <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
-                    <svg className="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <CheckCircle className="h-5 w-5 text-green-600" />
                   <span className="font-medium text-gray-900">Funding approved!</span>
                 </div>
                 <div className="mt-2">
-                  <span className="text-xs text-gray-500">$12,500 at 5% revenue share</span>
+                  <span className="text-sm text-gray-600">$12,500 at 5% revenue share</span>
                 </div>
               </div>
+              
+              {/* Credit Score Card */}
               <div className="absolute -left-4 bottom-8 animate-fade-up delay-100 bg-white rounded-xl shadow-lg p-4 w-48">
                 <div className="flex items-center space-x-2">
                   <div className="h-8 w-8 rounded-full bg-coral-100 flex items-center justify-center">
@@ -74,9 +74,9 @@ const HeroSection = () => {
                   <div className="h-2 rounded-full bg-gray-200">
                     <div className="h-2 rounded-full bg-gradient-to-r from-empowerher-400 to-empowerher-600 w-4/5"></div>
                   </div>
-                  <div className="mt-1 flex justify-between text-xs">
-                    <span className="text-gray-500">Previous</span>
-                    <span className="font-medium text-empowerher-600">+35 points</span>
+                  <div className="mt-1 flex justify-between text-sm">
+                    <span className="text-gray-600">Previous</span>
+                    <span className="text-empowerher-600 font-medium">+35 points</span>
                   </div>
                 </div>
               </div>
