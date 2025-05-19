@@ -26,14 +26,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Translation function
   const t = (key: string): string => {
     const keys = key.split('.');
-    let result = translations[language];
+    let result: any = translations[language];
     
     for (const k of keys) {
       if (result && typeof result === 'object' && k in result) {
         result = result[k as keyof typeof result];
       } else {
         // Fallback to English if translation is missing
-        let fallback = translations.english;
+        let fallback: any = translations.english;
         for (const fallbackKey of keys) {
           if (fallback && typeof fallback === 'object' && fallbackKey in fallback) {
             fallback = fallback[fallbackKey as keyof typeof fallback];
