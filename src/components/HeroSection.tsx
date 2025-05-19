@@ -21,7 +21,7 @@ const HeroSection = () => {
             <div className="max-w-md mx-auto lg:mx-0 lg:max-w-lg">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                 <span className="block">{t('hero.title')}</span>
-                <span className="block gradient-text">{t('hero.subtitle')}</span>
+                <span className="block text-empowerher-600">{t('hero.subtitle')}</span>
               </h1>
               <p className="mt-6 text-lg text-gray-600">
                 {t('hero.description')}
@@ -51,8 +51,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-empowerher-900/50 to-transparent opacity-60"></div>
               </div>
               
-              {/* Funding Approved Card */}
-              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-xl shadow-lg p-4 w-52 animate-fade-up">
+              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-xl shadow-lg p-4 w-52 z-10">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="h-5 w-5 text-green-600" />
                   <span className="font-medium text-gray-900">Funding approved!</span>
@@ -62,8 +61,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Credit Score Card */}
-              <div className="absolute -left-4 bottom-8 animate-fade-up delay-100 bg-white rounded-xl shadow-lg p-4 w-48">
+              <div className="absolute -left-4 bottom-8 bg-white rounded-xl shadow-lg p-4 w-48 z-10">
                 <div className="flex items-center space-x-2">
                   <div className="h-8 w-8 rounded-full bg-coral-100 flex items-center justify-center">
                     <svg className="h-5 w-5 text-coral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

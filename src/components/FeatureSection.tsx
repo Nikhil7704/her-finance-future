@@ -11,7 +11,7 @@ const FeatureSection = () => {
     {
       title: t('features.financing.title'),
       description: t('features.financing.description'),
-      icon: <DollarSign className="h-6 w-6" />,
+      icon: <DollarSign className="h-6 w-6 text-empowerher-600" />,
       items: [
         "Crowdfunding Marketplace with Impact Story Builder",
         "Revenue-Based Financing with dynamic repayment rates",
@@ -21,7 +21,7 @@ const FeatureSection = () => {
     {
       title: t('features.credit.title'),
       description: t('features.credit.description'),
-      icon: <Users className="h-6 w-6" />,
+      icon: <Users className="h-6 w-6 text-empowerher-600" />,
       items: [
         "Alternative data integration from mobile money and e-commerce",
         "Bias mitigation with explainable AI and fairness audits",
@@ -31,7 +31,7 @@ const FeatureSection = () => {
     {
       title: t('features.academy.title'),
       description: t('features.academy.description'),
-      icon: <Book className="h-6 w-6" />,
+      icon: <Book className="h-6 w-6 text-empowerher-600" />,
       items: [
         "Personalized learning paths with microlearning videos",
         "AI Chatbot Mentor via WhatsApp and Telegram",
@@ -54,9 +54,9 @@ const FeatureSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="empowerher-card hover:translate-y-[-5px]">
+            <Card key={index} className="shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px]">
               <CardHeader>
-                <div className="feature-icon mb-4 inline-flex">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-empowerher-100 mb-4">
                   {feature.icon}
                 </div>
                 <CardTitle className="text-xl font-bold">{feature.title}</CardTitle>

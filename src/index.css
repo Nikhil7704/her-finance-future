@@ -1,13 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -16,11 +14,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 200 97% 48%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 354 100% 58%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -33,9 +31,35 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
+
+    /* EmpowerHer Custom Colors */
+    --empowerher-50: 340 100% 97%;
+    --empowerher-100: 340 100% 94%;
+    --empowerher-200: 340 94% 88%;
+    --empowerher-300: 340 94% 82%;
+    --empowerher-400: 340 94% 68%;
+    --empowerher-500: 340 94% 58%;
+    --empowerher-600: 340 72% 51%;
+    --empowerher-700: 340 79% 46%;
+    --empowerher-800: 340 70% 36%;
+    --empowerher-900: 340 63% 31%;
+    --empowerher-950: 340 60% 20%;
+
+    /* Coral Custom Colors */
+    --coral-50: 16 100% 97%;
+    --coral-100: 16 100% 94%;
+    --coral-200: 16 100% 88%;
+    --coral-300: 16 94% 77%;
+    --coral-400: 16 94% 67%;
+    --coral-500: 16 94% 57%;
+    --coral-600: 16 90% 52%;
+    --coral-700: 16 85% 45%;
+    --coral-800: 16 80% 38%;
+    --coral-900: 16 75% 33%;
+    --coral-950: 16 80% 18%;
   }
 
   .dark {
@@ -48,7 +72,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -65,7 +89,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
@@ -73,24 +97,42 @@
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-empowerher-600 to-coral-500 bg-clip-text text-transparent;
-  }
-  
-  .empowerher-card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
-  }
-  
-  .feature-icon {
-    @apply p-3 rounded-lg text-white bg-gradient-to-br from-empowerher-500 to-empowerher-700;
+    @apply bg-background text-foreground;
   }
 }
 
-#root {
-  @apply max-w-none w-full p-0 m-0 text-left;
+/* Animation utilities */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient text for titles */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-empowerher-600 to-coral-500;
+}
+
+/* Card styling */
+.empowerher-card {
+  @apply border border-gray-100 rounded-xl shadow-sm transition-all duration-300 overflow-hidden;
+}
+
+/* Feature icon styling */
+.feature-icon {
+  @apply w-12 h-12 rounded-full bg-empowerher-100 flex items-center justify-center text-empowerher-600;
 }
