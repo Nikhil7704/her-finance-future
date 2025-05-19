@@ -1,381 +1,362 @@
-
-interface TranslationObject {
-  [key: string]: string | TranslationObject;
-}
-
-interface Translations {
-  [language: string]: TranslationObject;
-}
-
-export const translations: Translations = {
+export const translations = {
   english: {
     navbar: {
       financing: "Financing",
-      credit: "Credit Evaluation",
+      credit: "Credit",
       academy: "Academy",
       about: "About",
       signin: "Sign In",
       getStarted: "Get Started"
     },
-    hero: {
-      title: "Financial freedom",
-      subtitle: "for every woman",
-      description: "EmpowerHer Finance is dismantling barriers for women entrepreneurs through alternative financing, AI-powered credit evaluation, and practical financial education.",
-      cta: "Start Your Journey",
-      learnMore: "Learn More"
-    },
-    stats: {
-      title: "Our Impact",
-      description: "Empowering women entrepreneurs globally through financial inclusion and support."
-    },
-    features: {
-      title: "Our Three Pillars",
-      description: "EmpowerHer Finance is built on three interconnected pillars designed to holistically address the unique challenges faced by women entrepreneurs.",
-      financing: {
-        title: "Alternative Financing Hub",
-        description: "Access flexible, non-traditional funding options tailored to your unique business needs."
-      },
-      credit: {
-        title: "AI-Powered Credit Evaluation",
-        description: "Replace biased credit assessments with our equitable, data-driven scoring system."
-      },
-      academy: {
-        title: "Financial Literacy Academy",
-        description: "Equip yourself with practical skills to manage finances and scale your business."
-      }
-    },
-    testimonials: {
-      title: "Success Stories",
-      description: "Meet the women entrepreneurs who have transformed their businesses with EmpowerHer Finance."
-    },
     cta: {
-      title: "Ready to transform your financial future?",
-      description: "Join thousands of women entrepreneurs who are accessing the capital, knowledge, and community they need to thrive.",
+      title: "Unlock Your Business Potential Today",
+      description: "Join thousands of women entrepreneurs who have transformed their businesses with our platform.",
       financing: "Apply for Financing",
-      academy: "Explore the Academy"
+      academy: "Join Our Academy"
     },
-    academy: {
-      title: "EmpowerHer",
-      subtitle: "Academy",
-      description: "Designed specifically for women entrepreneurs, our courses will help you build the financial knowledge and skills needed to succeed in business.",
-      exploreCourses: "Explore Courses",
-      beginnerCourses: "Beginner Courses",
-      beginnerDescription: "Start your journey with our foundational courses designed for new entrepreneurs.",
-      advancedCourses: "Advanced Courses",
-      advancedDescription: "Take your business to the next level with our specialized advanced courses.",
-      mentorship: {
-        title: "1:1 Mentorship",
-        description: "Connect with experienced women entrepreneurs who have been in your shoes. Our mentorship program pairs you with business leaders who understand your unique challenges.",
-        feature1: "Personalized guidance tailored to your business needs",
-        feature2: "Monthly 1:1 sessions with your dedicated mentor",
-        feature3: "Access to our exclusive network of successful entrepreneurs",
-        cta: "Apply for Mentorship"
-      },
-      readyToGrow: "Ready to grow your financial knowledge?",
-      joinThousands: "Join thousands of women entrepreneurs who have transformed their businesses through our academy.",
-      createAccount: "Create Your Free Account"
-    },
-    chatbot: {
-      title: "Finance Assistant",
-      placeholder: "Ask me anything about financing or our services...",
-      send: "Send",
-      startMessage: "Hello! I'm your EmpowerHer Finance assistant. How can I help you today?"
+    // Adding credit evaluation translations
+    creditEval: {
+      heroTitle1: "Redefining Credit",
+      heroTitle2: "For Women Entrepreneurs",
+      heroDescription: "Our AI-powered credit evaluation system looks beyond traditional metrics to recognize the true potential of women-owned businesses.",
+      getEvaluation: "Get Your Credit Evaluation",
+      learnHow: "Learn How It Works",
+      formTitle: "Business Credit Evaluation",
+      formDescription: "Fill out the form below to get your personalized business credit score and recommendations.",
+      businessDetails: "Business Details",
+      allFieldsRequired: "All fields are required for an accurate evaluation",
+      businessName: "Business Name",
+      businessNamePlaceholder: "Enter your business name",
+      yearsInBusiness: "Years in Business",
+      yearsInBusinessPlaceholder: "e.g., 2",
+      monthlyRevenue: "Monthly Revenue (USD)",
+      monthlyRevenuePlaceholder: "e.g., 10000",
+      businessType: "Business Type/Industry",
+      businessTypePlaceholder: "e.g., Retail, Technology, Food Service",
+      existingLoans: "Number of Existing Loans",
+      existingLoansPlaceholder: "e.g., 1",
+      calculating: "Calculating...",
+      calculateScore: "Calculate Credit Score",
+      yourScore: "Your Business Credit Score",
+      scoreDescription: "Based on holistic evaluation of your business potential",
+      awaitingData: "No Data Yet",
+      fillFormPrompt: "Please complete the form to see your credit evaluation",
+      scoreRangeInfo: "Credit scores range from 300 to 850",
+      downloadReport: "Download Full Report",
+      howItWorks: "How Our Evaluation Works",
+      howItWorksDescription: "We assess your business potential using data points that traditional banks often overlook.",
+      holisticReview: "Holistic Financial Review",
+      holisticReviewDescription: "We analyze your cash flow patterns, revenue consistency, and growth trajectory, not just credit scores and collateral.",
+      potentialAssessment: "Business Potential Assessment",
+      potentialAssessmentDescription: "Our AI evaluates your business model, market opportunity, and competitive advantage to understand your growth potential.",
+      characterCapability: "Character and Capability",
+      characterCapabilityDescription: "We consider your entrepreneurial experience, adaptability, and commitment to your business success.",
+      academy: "Credit Academy",
+      academyDescription: "Build your knowledge and improve your credit profile with our educational resources.",
+      fundamentals: "Credit Fundamentals",
+      forBeginners: "For Beginners",
+      fundamentalsDescription: "Learn the basics of credit, how scoring works, and simple strategies to improve your business credit profile.",
+      understandingReports: "Understanding credit reports",
+      buildingCredit: "Building business credit",
+      repairStrategies: "Credit repair strategies",
+      advanced: "Advanced Credit Strategies",
+      forGrowing: "For Growing Businesses",
+      advancedDescription: "Discover sophisticated credit optimization techniques and alternative funding strategies for your growing business.",
+      advancedUtilization: "Advanced credit utilization",
+      debtManagement: "Strategic debt management",
+      alternativeFunding: "Alternative funding sources",
+      startLearning: "Start Learning",
+      ctaTitle: "Ready to transform your credit profile?",
+      ctaDescription: "Join thousands of women entrepreneurs who have improved their credit and accessed the funding they deserve.",
+      getFreeEvaluation: "Get Your Free Credit Evaluation"
     }
   },
   hindi: {
     navbar: {
       financing: "वित्तपोषण",
-      credit: "क्रेडिट मूल्यांकन",
+      credit: "क्रेडिट",
       academy: "अकादमी",
       about: "हमारे बारे में",
       signin: "साइन इन करें",
       getStarted: "शुरू करें"
     },
-    hero: {
-      title: "वित्तीय स्वतंत्रता",
-      subtitle: "हर महिला के लिए",
-      description: "एम्पावरहर फाइनेंस वैकल्पिक वित्तपोषण, AI-संचालित क्रेडिट मूल्यांकन और व्यावहारिक वित्तीय शिक्षा के माध्यम से महिला उद्यमियों के लिए बाधाओं को दूर कर रहा है।",
-      cta: "अपनी यात्रा शुरू करें",
-      learnMore: "और जानें"
-    },
-    stats: {
-      title: "हमारा प्रभाव",
-      description: "वित्तीय समावेश और समर्थन के माध्यम से दुनिया भर में महिला उद्यमियों को सशक्त बनाना।"
-    },
-    features: {
-      title: "हमारे तीन स्तंभ",
-      description: "एम्पावरहर फाइनेंस तीन परस्पर जुड़े स्तंभों पर बनाया गया है जो महिला उद्यमियों के सामने आने वाली अनूठी चुनौतियों का समग्र रूप से समाधान करता है।",
-      financing: {
-        title: "वैकल्पिक वित्तपोषण केंद्र",
-        description: "अपनी अनूठी व्यावसायिक आवश्यकताओं के अनुरूप लचीले, गैर-पारंपरिक फंडिंग विकल्पों तक पहुंचें।"
-      },
-      credit: {
-        title: "AI-संचालित क्रेडिट मूल्यांकन",
-        description: "पक्षपातपूर्ण क्रेडिट मूल्यांकनों को हमारी न्यायसंगत, डेटा-संचालित स्कोरिंग प्रणाली से बदलें।"
-      },
-      academy: {
-        title: "वित्तीय साक्षरता अकादमी",
-        description: "वित्त प्रबंधन और अपने व्यवसाय को बढ़ाने के लिए व्यावहारिक कौशल से स्वयं को सुसज्जित करें।"
-      }
-    },
-    testimonials: {
-      title: "सफलता की कहानियां",
-      description: "उन महिला उद्यमियों से मिलें जिन्होंने एम्पावरहर फाइनेंस के साथ अपने व्यवसायों को बदल दिया है।"
-    },
     cta: {
-      title: "अपने वित्तीय भविष्य को बदलने के लिए तैयार हैं?",
-      description: "हजारों महिला उद्यमियों से जुड़ें जो पूंजी, ज्ञान और समुदाय तक पहुंच रही हैं जिनकी उन्हें फलने-फूलने के लिए आवश्यकता है।",
+      title: "आज ही अपने व्यापार की क्षमता को अनलॉक करें",
+      description: "हजारों महिला उद्यमियों से जुड़ें जिन्होंने हमारे प्लेटफॉर्म से अपने व्यवसायों को बदल दिया है।",
       financing: "वित्तपोषण के लिए आवेदन करें",
-      academy: "अकादमी का अन्वेषण करें"
+      academy: "हमारी अकादमी में शामिल हों"
     },
-    academy: {
-      title: "एम्पावरहर",
-      subtitle: "अकादमी",
-      description: "विशेष रूप से महिला उद्यमियों के लिए डिज़ाइन किए गए, हमारे पाठ्यक्रम आपको व्यवसाय में सफल होने के लिए आवश्यक वित्तीय ज्ञान और कौशल विकसित करने में मदद करेंगे।",
-      exploreCourses: "पाठ्यक्रम देखें",
-      beginnerCourses: "शुरुआती पाठ्यक्रम",
-      beginnerDescription: "नए उद्यमियों के लिए डिज़ाइन किए गए हमारे आधारभूत पाठ्यक्रमों के साथ अपनी यात्रा शुरू करें।",
-      advancedCourses: "उन्नत पाठ्यक्रम",
-      advancedDescription: "हमारे विशेष उन्नत पाठ्यक्रमों के साथ अपने व्यवसाय को अगले स्तर पर ले जाएं।",
-      mentorship: {
-        title: "1:1 मेंटरशिप",
-        description: "अनुभवी महिला उद्यमियों से जुड़ें जो आपके जूते में रह चुके हैं। हमारा मेंटरशिप प्रोग्राम आपको ऐसे बिजनेस लीडर्स के साथ जोड़ता है जो आपकी अनूठी चुनौतियों को समझते हैं।",
-        feature1: "आपकी व्यावसायिक जरूरतों के अनुरूप व्यक्तिगत मार्गदर्शन",
-        feature2: "आपके समर्पित मेंटर के साथ मासिक 1:1 सेशन",
-        feature3: "सफल उद्यमियों के हमारे विशिष्ट नेटवर्क तक पहुंच",
-        cta: "मेंटरशिप के लिए आवेदन करें"
-      },
-      readyToGrow: "अपने वित्तीय ज्ञान को बढ़ाने के लिए तैयार हैं?",
-      joinThousands: "हजारों महिला उद्यमियों से जुड़ें जिन्होंने हमारी अकादमी के माध्यम से अपने व्यवसायों को बदल दिया है।",
-      createAccount: "अपना नि:शुल्क खाता बनाएं"
-    },
-    chatbot: {
-      title: "वित्त सहायक",
-      placeholder: "वित्तपोषण या हमारी सेवाओं के बारे में कुछ भी पूछें...",
-      send: "भेजें",
-      startMessage: "नमस्ते! मैं आपका एम्पावरहर फाइनेंस सहायक हूं। आज मैं आपकी कैसे सहायता कर सकता हूं?"
+    // Hindi credit evaluation translations
+    creditEval: {
+      heroTitle1: "क्रेडिट को",
+      heroTitle2: "महिला उद्यमियों के लिए पुनर्परिभाषित",
+      heroDescription: "हमारी AI-संचालित क्रेडिट मूल्यांकन प्रणाली महिलाओं के स्वामित्व वाले व्यवसायों की वास्तविक क्षमता को पहचानने के लिए पारंपरिक मेट्रिक्स से परे देखती है।",
+      getEvaluation: "अपना क्रेडिट मूल्यांकन प्राप्त करें",
+      learnHow: "कैसे काम करता है जानें",
+      formTitle: "व्यापार क्रेडिट मूल्यांकन",
+      formDescription: "अपना व्यक्तिगत व्यापार क्रेडिट स्कोर और सिफारिशें प्राप्त करने के लिए नीचे दिए गए फॉर्म को भरें।",
+      businessDetails: "व्यापार विवरण",
+      allFieldsRequired: "सटीक मूल्यांकन के लिए सभी फ़ील्ड आवश्यक हैं",
+      businessName: "व्यापार का नाम",
+      businessNamePlaceholder: "अपने व्यापार का नाम दर्ज करें",
+      yearsInBusiness: "व्यापार में वर्ष",
+      yearsInBusinessPlaceholder: "उदा., 2",
+      monthlyRevenue: "मासिक राजस्व (USD)",
+      monthlyRevenuePlaceholder: "उदा., 10000",
+      businessType: "व्यापार प्रकार/उद्योग",
+      businessTypePlaceholder: "उदा., खुदरा, प्रौद्योगिकी, खाद्य सेवा",
+      existingLoans: "मौजूदा ऋणों की संख्या",
+      existingLoansPlaceholder: "उदा., 1",
+      calculating: "गणना हो रही है...",
+      calculateScore: "क्रेडिट स्कोर की गणना करें",
+      yourScore: "आपका व्यापार क्रेडिट स्कोर",
+      scoreDescription: "आपके व्यापार की संभावना के समग्र मूल्यांकन के आधार पर",
+      awaitingData: "अभी तक कोई डेटा नहीं",
+      fillFormPrompt: "अपना क्रेडिट मूल्यांकन देखने के लिए कृपया फॉर्म पूरा करें",
+      scoreRangeInfo: "क्रेडिट स्कोर 300 से 850 तक होते हैं",
+      downloadReport: "पूरी रिपोर्ट डाउनलोड करें",
+      howItWorks: "हमारा मूल्यांकन कैसे काम करता है",
+      howItWorksDescription: "हम आपके व्यापार की क्षमता का आकलन उन डेटा पॉइंट्स का उपयोग करके करते हैं जिन्हें पारंपरिक बैंक अक्सर अनदेखा कर देते हैं।",
+      holisticReview: "समग्र वित्तीय समीक्षा",
+      holisticReviewDescription: "हम आपके कैश फ्लो पैटर्न, राजस्व स्थिरता और विकास प्रक्षेपवक्र का विश्लेषण करते हैं, न कि केवल क्रेडिट स्कोर और संपार्श्विक।",
+      potentialAssessment: "व्यापार संभावना मूल्यांकन",
+      potentialAssessmentDescription: "हमारी AI आपके विकास क्षमता को समझने के लिए आपके व्यापार मॉडल, बाजार अवसर और प्रतिस्पर्धात्मक लाभ का मूल्यांकन करती है।",
+      characterCapability: "चरित्र और क्षमता",
+      characterCapabilityDescription: "हम आपके उद्यमशीलता अनुभव, अनुकूलन क्षमता और आपके व्यापार की सफलता के प्रति प्रतिबद्धता पर विचार करते हैं।",
+      academy: "क्रेडिट अकादमी",
+      academyDescription: "हमारे शैक्षिक संसाधनों के साथ अपना ज्ञान बढ़ाएं और अपनी क्रेडिट प्रोफाइल में सुधार करें।",
+      fundamentals: "क्रेडिट मूलभूत बातें",
+      forBeginners: "नौसिखियों के लिए",
+      fundamentalsDescription: "क्रेडिट के बारे में मूल बातें, स्कोरिंग कैसे काम करती है, और अपनी व्यापार क्रेडिट प्रोफाइल में सुधार के लिए सरल रणनीतियां सीखें।",
+      understandingReports: "क्रेडिट रिपोर्ट को समझना",
+      buildingCredit: "व्यापार क्रेडिट का निर्माण",
+      repairStrategies: "क्रेडिट सुधार रणनीतियां",
+      advanced: "उन्नत क्रेडिट रणनीतियां",
+      forGrowing: "बढ़ते व्यवसायों के लिए",
+      advancedDescription: "अपने बढ़ते व्यापार के लिए परिष्कृत क्रेडिट अनुकूलन तकनीकों और वैकल्पिक वित्तपोषण रणनीतियों का पता लगाएं।",
+      advancedUtilization: "उन्नत क्रेडिट उपयोग",
+      debtManagement: "रणनीतिक ऋण प्रबंधन",
+      alternativeFunding: "वैकल्पिक वित्तपोषण स्रोत",
+      startLearning: "सीखना शुरू करें",
+      ctaTitle: "अपनी क्रेडिट प्रोफाइल को बदलने के लिए तैयार हैं?",
+      ctaDescription: "हजारों महिला उद्यमियों से जुड़ें जिन्होंने अपने क्रेडिट में सुधार किया है और वे वित्तपोषण प्राप्त किया है जिसके वे हकदार हैं।",
+      getFreeEvaluation: "अपना मुफ्त क्रेडिट मूल्यांकन प्राप्त करें"
     }
   },
   marathi: {
     navbar: {
       financing: "वित्तपुरवठा",
-      credit: "क्रेडिट मूल्यांकन",
+      credit: "क्रेडिट",
       academy: "अकादमी",
       about: "आमच्याबद्दल",
       signin: "साइन इन करा",
       getStarted: "सुरू करा"
     },
-    hero: {
-      title: "आर्थिक स्वातंत्र्य",
-      subtitle: "प्रत्येक महिलेसाठी",
-      description: "एम्पावरहर फायनान्स पर्यायी वित्तपुरवठा, AI-संचालित क्रेडिट मूल्यांकन आणि प्रात्यक्षिक आर्थिक शिक्षणाद्वारे महिला उद्योजकांसाठी अडथळे दूर करत आहे.",
-      cta: "तुमची यात्रा सुरू करा",
-      learnMore: "अधिक जाणून घ्या"
-    },
-    stats: {
-      title: "आमचा प्रभाव",
-      description: "जागतिक स्तरावर आर्थिक समावेशन आणि समर्थनाद्वारे महिला उद्योजकांना सक्षम करणे."
-    },
-    features: {
-      title: "आमचे तीन स्तंभ",
-      description: "एम्पावरहर फायनान्स हे तीन परस्पर जोडलेल्या स्तंभांवर आधारित आहे जे महिला उद्योजकांसमोरील अनोख्या आव्हानांचे सर्वांगीण निराकरण करण्यासाठी तयार केले आहेत.",
-      financing: {
-        title: "पर्यायी वित्तपुरवठा केंद्र",
-        description: "तुमच्या अनोख्या व्यावसायिक गरजांनुसार लवचिक, अपारंपारिक निधी पर्यायांमध्ये प्रवेश करा."
-      },
-      credit: {
-        title: "AI-संचालित क्रेडिट मूल्यांकन",
-        description: "पक्षपाती क्रेडिट मूल्यांकने आमच्या न्याय्य, डेटा-संचालित स्कोरिंग सिस्टमसह बदला."
-      },
-      academy: {
-        title: "वित्तीय साक्षरता अकादमी",
-        description: "वित्त व्यवस्थापित करण्यासाठी आणि तुमचा व्यवसाय वाढविण्यासाठी प्रात्यक्षिक कौशल्ये मिळवा."
-      }
-    },
-    testimonials: {
-      title: "यशस्वी कथा",
-      description: "अशा महिला उद्योजकांना भेटा ज्यांनी एम्पावरहर फायनान्ससह त्यांचा व्यवसाय बदलला आहे."
-    },
     cta: {
-      title: "तुमचे आर्थिक भविष्य बदलण्यासाठी तयार आहात?",
-      description: "हजारो महिला उद्योजकांमध्ये सामील व्हा ज्या भरभराट करण्यासाठी आवश्यक असलेल्या भांडवल, ज्ञान आणि समुदायापर्यंत पोहोचत आहेत.",
+      title: "आज आपल्या व्यवसायाची क्षमता अनलॉक करा",
+      description: "हजारो महिला उद्योजकांसह सामील व्हा ज्यांनी आमच्या प्लॅटफॉर्मसह त्यांचा व्यवसाय बदलला आहे.",
       financing: "वित्तपुरवठ्यासाठी अर्ज करा",
-      academy: "अकादमीचा शोध घ्या"
+      academy: "आमच्या अकादमीत सामील व्हा"
     },
-    academy: {
-      title: "एम्पावरहर",
-      subtitle: "अकादमी",
-      description: "विशेषत: महिला उद्योजकांसाठी डिझाइन केलेले, आमचे अभ्यासक्रम तुम्हाला व्यवसायात यशस्वी होण्यासाठी आवश्यक आर्थिक ज्ञान आणि कौशल्ये विकसित करण्यात मदत करतील.",
-      exploreCourses: "अभ्यासक्रम एक्स्प्लोर करा",
-      beginnerCourses: "नवशिक्या अभ्यासक्रम",
-      beginnerDescription: "नवीन उद्योजकांसाठी डिझाइन केलेल्या आमच्या मूलभूत अभ्यासक्रमांसह तुमची यात्रा सुरू करा.",
-      advancedCourses: "प्रगत अभ्यासक्रम",
-      advancedDescription: "आमच्या विशिष्ट प्रगत अभ्यासक्रमांसह तुमचा व्यवसाय पुढच्या स्तरावर न्या.",
-      mentorship: {
-        title: "1:1 मार्गदर्शन",
-        description: "अनुभवी महिला उद्योजकांशी जोडा ज्या तुमच्या जागी होत्या. आमचा मार्गदर्शन कार्यक्रम तुम्हाला अशा व्यवसाय नेत्यांसह जोडतो जे तुमची अनोखी आव्हाने समजतात.",
-        feature1: "तुमच्या व्यावसायिक गरजांनुसार वैयक्तिक मार्गदर्शन",
-        feature2: "तुमच्या समर्पित मार्गदर्शकासह मासिक 1:1 सत्र",
-        feature3: "यशस्वी उद्योजकांच्या आमच्या अनन्य नेटवर्कमध्ये प्रवेश",
-        cta: "मार्गदर्शनासाठी अर्ज करा"
-      },
-      readyToGrow: "तुमचे आर्थिक ज्ञान वाढवण्यासाठी तयार आहात?",
-      joinThousands: "हजारो महिला उद्योजकांमध्ये सामील व्हा ज्यांनी आमच्या अकादमीद्वारे त्यांचा व्यवसाय बदलला आहे.",
-      createAccount: "तुमचे विनामूल्य खाते तयार करा"
-    },
-    chatbot: {
-      title: "वित्त सहाय्यक",
-      placeholder: "वित्तपुरवठ्याविषयी किंवा आमच्या सेवांबद्दल काहीही विचारा...",
-      send: "पाठवा",
-      startMessage: "नमस्कार! मी तुमचा एम्पावरहर फायनान्स सहाय्यक आहे. मी आज तुमची कशी मदत करू शकतो?"
+    // Marathi credit evaluation translations
+    creditEval: {
+      heroTitle1: "क्रेडिट पुनर्परिभाषित",
+      heroTitle2: "महिला उद्योजकांसाठी",
+      heroDescription: "आमची AI-चालित क्रेडिट मूल्यांकन प्रणाली पारंपारिक मेट्रिक्सच्या पलीकडे पाहते महिला-मालकीच्या व्यवसायांची खरी क्षमता ओळखण्यासाठी.",
+      getEvaluation: "आपले क्रेडिट मूल्यांकन मिळवा",
+      learnHow: "हे कसे कार्य करते ते जाणून घ्या",
+      formTitle: "व्यावसायिक क्रेडिट मूल्यांकन",
+      formDescription: "तुमचे वैयक्तिक व्यावसायिक क्रेडिट स्कोअर आणि शिफारसी मिळवण्यासाठी खालील फॉर्म भरा.",
+      businessDetails: "व्यवसाय तपशील",
+      allFieldsRequired: "अचूक मूल्यांकनासाठी सर्व फील्ड आवश्यक आहेत",
+      businessName: "व्यवसायाचे नाव",
+      businessNamePlaceholder: "आपल्या व्यवसायाचे नाव प्रविष्ट करा",
+      yearsInBusiness: "व्यवसायात वर्षे",
+      yearsInBusinessPlaceholder: "उदा., 2",
+      monthlyRevenue: "मासिक महसूल (USD)",
+      monthlyRevenuePlaceholder: "उदा., 10000",
+      businessType: "व्यवसाय प्रकार/उद्योग",
+      businessTypePlaceholder: "उदा., किरकोळ, तंत्रज्ञान, अन्न सेवा",
+      existingLoans: "विद्यमान कर्जांची संख्या",
+      existingLoansPlaceholder: "उदा., 1",
+      calculating: "गणना करत आहे...",
+      calculateScore: "क्रेडिट स्कोअर गणना करा",
+      yourScore: "आपला व्यावसायिक क्रेडिट स्कोअर",
+      scoreDescription: "आपल्या व्यवसायाच्या संभाव्यतेच्या समग्र मूल्यांकनावर आधारित",
+      awaitingData: "अद्याप डेटा नाही",
+      fillFormPrompt: "आपले क्रेडिट मूल्यांकन पाहण्यासाठी कृपया फॉर्म पूर्ण करा",
+      scoreRangeInfo: "क्रेडिट स्कोअर 300 ते 850 पर्यंत असतात",
+      downloadReport: "संपूर्ण अहवाल डाउनलोड करा",
+      howItWorks: "आमचे मूल्यांकन कसे कार्य करते",
+      howItWorksDescription: "आम्ही डेटा पॉइंट्स वापरून आपल्या व्यवसायाची क्षमता मूल्यांकन करतो जी पारंपारिक बँका अनेकदा दुर्लक्षित करतात.",
+      holisticReview: "समग्र आर्थिक समीक्षा",
+      holisticReviewDescription: "आम्ही आपल्या रोख प्रवाहाचे पॅटर्न, महसूल स्थिरता, आणि वाढीचा मार्ग विश्लेषित करतो, फक्त क्रेडिट स्कोअर आणि तारण नाही.",
+      potentialAssessment: "व्यवसाय संभाव्यता मूल्यांकन",
+      potentialAssessmentDescription: "आमची AI आपल्या व्यवसाय मॉडेल, बाजार संधी, आणि स्पर्धात्मक फायदा मूल्यांकन करते आपल्या वाढीची क्षमता समजून घेण्यासाठी.",
+      characterCapability: "चारित्र्य आणि क्षमता",
+      characterCapabilityDescription: "आम्ही आपल्या उद्योजकता अनुभव, अनुकूलनक्षमता, आणि आपल्या व्यवसायाच्या यशासाठी वचनबद्धता विचारात घेतो.",
+      academy: "क्रेडिट अकादमी",
+      academyDescription: "आमच्या शैक्षणिक संसाधनांसह आपले ज्ञान वाढवा आणि आपली क्रेडिट प्रोफाइल सुधारा.",
+      fundamentals: "क्रेडिट मूलभूत गोष्टी",
+      forBeginners: "नवशिक्यांसाठी",
+      fundamentalsDescription: "क्रेडिटचे मूलभूत गोष्टी, स्कोरिंग कसे कार्य करते, आणि आपल्या व्यावसायिक क्रेडिट प्रोफाइल सुधारण्यासाठी सोप्या रणनीती शिका.",
+      understandingReports: "क्रेडिट अहवाल समजून घेणे",
+      buildingCredit: "व्यावसायिक क्रेडिट तयार करणे",
+      repairStrategies: "क्रेडिट दुरुस्ती रणनीती",
+      advanced: "प्रगत क्रेडिट रणनीती",
+      forGrowing: "वाढणाऱ्या व्यवसायांसाठी",
+      advancedDescription: "आपल्या वाढणाऱ्या व्यवसायासाठी सुधारित क्रेडिट ऑप्टिमायझेशन तंत्रे आणि पर्यायी निधी रणनीती शोधा.",
+      advancedUtilization: "प्रगत क्रेडिट वापर",
+      debtManagement: "धोरणात्मक कर्ज व्यवस्थापन",
+      alternativeFunding: "पर्यायी निधी स्रोत",
+      startLearning: "शिकणे सुरू करा",
+      ctaTitle: "आपली क्रेडिट प्रोफाइल बदलण्यास तयार आहात?",
+      ctaDescription: "हजारो महिला उद्योजकांसह सामील व्हा ज्यांनी त्यांच्या क्रेडिटमध्ये सुधारणा केली आहे आणि त्यांना लायक असलेले निधी मिळवला आहे.",
+      getFreeEvaluation: "आपले मोफत क्रेडिट मूल्यांकन मिळवा"
     }
   },
   gujarati: {
     navbar: {
-      financing: "નાણાકીય",
-      credit: "ક્રેડિટ મૂલ્યાંકન",
+      financing: "ફાઇનાન્સિંગ",
+      credit: "ક્રેડિટ",
       academy: "એકેડમી",
       about: "અમારા વિશે",
       signin: "સાઇન ઇન કરો",
       getStarted: "શરૂ કરો"
     },
-    hero: {
-      title: "નાણાકીય સ્વતંત્રતા",
-      subtitle: "દરેક મહિલા માટે",
-      description: "એમ્પાવરહર ફાઇનાન્સ વૈકલ્પિક નાણાકીય, AI-સંચાલિત ક્રેડિટ મૂલ્યાંકન અને પ્રેક્ટિકલ નાણાકીય શિક્ષણ દ્વારા મહિલા ઉદ્યોગસાહસિકો માટે અવરોધો દૂર કરી રહ્યું છે.",
-      cta: "તમારી મુસાફરી શરૂ કરો",
-      learnMore: "વધુ જાણો"
-    },
-    stats: {
-      title: "અમારી અસર",
-      description: "નાણાકીય સમાવેશ અને સમર્થન દ્વારા વિશ્વભરમાં મહિલા ઉદ્યોગસાહસિકોને સશક્ત બનાવવી."
-    },
-    features: {
-      title: "અમારા ત્રણ સ્તંભો",
-      description: "એમ્પાવરહર ફાઇનાન્સ ત્રણ આંતરિક રીતે જોડાયેલા સ્તંભો પર બનાવવામાં આવ્યું છે જે મહિલા ઉદ્યોગસાહસિકોને પડકારતા અનોખા પડકારોને સર્વાંગી રીતે સંબોધે છે.",
-      financing: {
-        title: "વૈકલ્પિક નાણાકીય કેન્દ્ર",
-        description: "તમારી અનન્ય વ્યાવસાયિક જરૂરિયાતો અનુસાર લવચીક, બિન-પરંપરાગત ફંડિંગ વિકલ્પોનો ઉપયોગ કરો."
-      },
-      credit: {
-        title: "AI-સંચાલિત ક્રેડિટ મૂલ્યાંકન",
-        description: "પૂર્વગ્રહયુક્ત ક્રેડિટ મૂલ્યાંકનને અમારી ન્યાયી, ડેટા-આધારિત સ્કોરિંગ સિસ્ટમ સાથે બદલો."
-      },
-      academy: {
-        title: "નાણાકીય સાક્ષરતા એકેડમી",
-        description: "નાણાંનું સંચાલન કરવા અને તમારા વ્યવસાયને વિકસાવવા માટે વ્યવહારુ કૌશલ્યોથી તમારી જાતને સજ્જ કરો."
-      }
-    },
-    testimonials: {
-      title: "સફળતાની કથાઓ",
-      description: "એમ્પાવરહર ફાઇનાન્સ સાથે તેમના વ્યવસાયને બદલ્યા છે તે મહિલા ઉદ્યોગસાહસિકોને મળો."
-    },
     cta: {
-      title: "તમારા નાણાકીય ભવિષ્યને બદલવા માટે તૈયાર છો?",
-      description: "હજારો મહિલા ઉદ્યોગસાહસિકો સાથે જોડાઓ જેઓ મૂડી, જ્ઞાન અને સમુદાય સુધી પહોંચી રહ્યા છે જેની તેમને સમૃદ્ધ થવા માટે જરૂર છે.",
-      financing: "નાણાકીય માટે અરજી કરો",
-      academy: "એકેડમીનું અન્વેષણ કરો"
+      title: "આજે જ તમારા વ્યવસાયની ક્ષમતાને અનલૉક કરો",
+      description: "હજારો મહિલા ઉદ્યોગસાહસિકો સાથે જોડાઓ જેમણે અમારા પ્લેટફોર્મ સાથે તેમના વ્યવસાયોનું પરિવર્તન કર્યું છે.",
+      financing: "ફાઇનાન્સિંગ માટે અરજી કરો",
+      academy: "અમારી એકેડમીમાં જોડાઓ"
     },
-    academy: {
-      title: "એમ્પાવરહર",
-      subtitle: "એકેડમી",
-      description: "ખાસ કરીને મહિલા ઉદ્યોગસાહસિકો માટે ડિઝાઇન કરાયેલ, અમારા કોર્સ તમને વ્યવસાયમાં સફળ થવા માટે જરૂરી નાણાકીય જ્ઞાન અને કૌશલ્યો બનાવવામાં મદદ કરશે.",
-      exploreCourses: "કોર્સ એક્સપ્લોર કરો",
-      beginnerCourses: "શરૂઆતના કોર્સ",
-      beginnerDescription: "નવા ઉદ્યોગસાહસિકો માટે ડિઝાઇન કરેલા અમારા પાયાના કોર્સ સાથે તમારી મુસાફરી શરૂ કરો.",
-      advancedCourses: "એડવાન્સ્ડ કોર્સ",
-      advancedDescription: "અમારા વિશિષ્ટ એડવાન્સ્ડ કોર્સ સાથે તમારા વ્યવસાયને આગલા સ્તરે લઈ જાઓ.",
-      mentorship: {
-        title: "1:1 માર્ગદર્શન",
-        description: "અનુભવી મહિલા ઉદ્યોગસાહસિકો સાથે જોડાઓ જેઓ તમારા જૂતામાં રહી ચૂક્યા છે. અમારો માર્ગદર્શન કાર્યક્રમ તમને બિઝનેસ લીડર્સ સાથે જોડે છે જેઓ તમારા અનોખા પડકારો સમજે છે.",
-        feature1: "તમારી વ્યવસાયિક જરૂરિયાતો અનુસાર વ્યક્તિગત માર્ગદર્શન",
-        feature2: "તમારા સમર્પિત માર્ગદર્શક સાથે માસિક 1:1 સત્રો",
-        feature3: "સફળ ઉદ્યોગસાહસિકોના અમારા વિશિષ્ટ નેટવર્ક સુધી પહોંચ",
-        cta: "માર્ગદર્શન માટે અરજી કરો"
-      },
-      readyToGrow: "તમારા નાણાકીય જ્ઞાનને વિકસાવવા માટે તૈયાર છો?",
-      joinThousands: "હજારો મહિલા ઉદ્યોગસાહસિકો સાથે જોડાઓ જેમણે અમારી એકેડમી દ્વારા તેમના વ્યવસાયને બદલ્યો છે.",
-      createAccount: "તમારું મફત એકાઉન્ટ બનાવો"
-    },
-    chatbot: {
-      title: "નાણાકીય સહાયક",
-      placeholder: "નાણાકીય અથવા અમારી સેવાઓ વિશે કંઈપણ પૂછો...",
-      send: "મોકલો",
-      startMessage: "નમસ્તે! હું તમારો એમ્પાવરહર ફાઇનાન્સ સહાયક છું. આજે હું તમારી કેવી રીતે મદદ કરી શકું?"
+    // Gujarati credit evaluation translations
+    creditEval: {
+      heroTitle1: "ક્રેડિટને ફરીથી",
+      heroTitle2: "મહિલા ઉદ્યોગસાહસિકો માટે",
+      heroDescription: "અમારી AI-સંચાલિત ક્રેડિટ મૂલ્યાંકન સિસ્ટમ મહિલા-માલિકીની કંપનીઓની સાચી ક્ષમતાને ઓળખવા માટે પરંપરાગત મેટ્રિક્સથી પણ આગળ જુએ છે.",
+      getEvaluation: "તમારું ક્રેડિટ મૂલ્યાંકન મેળવો",
+      learnHow: "તે કેવી રીતે કામ કરે છે તે જાણો",
+      formTitle: "વ્યાપાર ક્રેડિટ મૂલ્યાંકન",
+      formDescription: "તમારા વ્યક્તિગત વ્યાપાર ક્રેડિટ સ્કોર અને ભલામણો મેળવવા માટે નીચેનું ફોર્મ ભરો.",
+      businessDetails: "વ્યાપાર વિગતો",
+      allFieldsRequired: "સચોટ મૂલ્યાંકન માટે બધા ક્ષેત્રો જરૂરી છે",
+      businessName: "વ્યાપારનું નામ",
+      businessNamePlaceholder: "તમારા વ્યાપારનું નામ દાખલ કરો",
+      yearsInBusiness: "વ્યાપારમાં વર્ષો",
+      yearsInBusinessPlaceholder: "દા.ત., 2",
+      monthlyRevenue: "માસિક આવક (USD)",
+      monthlyRevenuePlaceholder: "દા.ત., 10000",
+      businessType: "વ્યાપાર પ્રકાર/ઉદ્યોગ",
+      businessTypePlaceholder: "દા.ત., રિટેલ, ટેકનોલોજી, ફૂડ સર્વિસ",
+      existingLoans: "હાલના લોનની સંખ્યા",
+      existingLoansPlaceholder: "દા.ત., 1",
+      calculating: "ગણતરી કરી રહ્યા છીએ...",
+      calculateScore: "ક્રેડિટ સ્કોર ગણો",
+      yourScore: "તમારો વ્યાપાર ક્રેડિટ સ્કોર",
+      scoreDescription: "તમારા વ્યાપારની સંભવિતતાના સંપૂર્ણ મૂલ્યાંકન પર આધારિત",
+      awaitingData: "હજી સુધી કોઈ ડેટા નથી",
+      fillFormPrompt: "તમારું ક્રેડિટ મૂલ્યાંકન જોવા માટે કૃપા કરીને ફોર્મ પૂર્ણ કરો",
+      scoreRangeInfo: "ક્રેડિટ સ્કોર 300 થી 850 સુધી હોય છે",
+      downloadReport: "સંપૂર્ણ રિપોર્ટ ડાઉનલોડ કરો",
+      howItWorks: "અમારું મૂલ્યાંકન કેવી રીતે કામ કરે છે",
+      howItWorksDescription: "અમે તમારા વ્યાપારની ક્ષમતાનું મૂલ્યાંકન એવા ડેટા પોઈન્ટ્સનો ઉપયોગ કરીને કરીએ છીએ જેને પરંપરાગત બેંકો ઘણીવાર અવગણે છે.",
+      holisticReview: "સંપૂર્ણ નાણાકીય સમીક્ષા",
+      holisticReviewDescription: "અમે તમારા કેશ ફ્લો પેટર્ન, આવકની સ્થિરતા, અને વૃદ્ધિના માર્ગનું વિશ્લેષણ કરીએ છીએ, માત્ર ક્રેડિટ સ્કોર અને સંપત્તિ નહીં.",
+      potentialAssessment: "વ્યાપાર સંભાવના મૂલ્યાંકન",
+      potentialAssessmentDescription: "અમારી AI તમારી વૃદ્ધિની ક્ષમતાને સમજવા માટે તમારા બિઝનેસ મોડેલ, માર્કેટ તક, અને સ્પર્ધાત્મક લાભનું મૂલ્યાંકન કરે છે.",
+      characterCapability: "ચારિત્ર્ય અને ક્ષમતા",
+      characterCapabilityDescription: "અમે તમારા ઉદ્યોગસાહસિક અનુભવ, અનુકૂલનક્ષમતા, અને તમારા વ્યાપારની સફળતા માટેની તમારી પ્રતિબદ્ધતાને ધ્યાનમાં લઈએ છીએ.",
+      academy: "ક્રેડિટ એકેડમી",
+      academyDescription: "અમારા શૈક્ષણિક સંસાધનો સાથે તમારું જ્ઞાન વધારો અને તમારી ક્રેડિટ પ્રોફાઇલ સુધારો.",
+      fundamentals: "ક્રેડિટ પાયાની બાબતો",
+      forBeginners: "શરૂઆતકર્તાઓ માટે",
+      fundamentalsDescription: "ક્રેડિટના મૂળભૂત સિદ્ધાંતો, સ્કોરિંગ કેવી રીતે કાર્ય કરે છે, અને તમારી બિઝનેસ ક્રેડિટ પ્રોફાઇલ સુધારવા માટેની સરળ વ્યૂહરચનાઓ શીખો.",
+      understandingReports: "ક્રેડિટ રિપોર્ટ્સ સમજવા",
+      buildingCredit: "બિઝનેસ ક્રેડિટ બનાવવું",
+      repairStrategies: "ક્રેડિટ સુધારણા વ્યૂહરચનાઓ",
+      advanced: "એડવાન્સ્ડ ક્રેડિટ વ્યૂહરચનાઓ",
+      forGrowing: "વધતા વ્યવસાયો માટે",
+      advancedDescription: "તમારા વધતા વ્યવસાય માટે સુધારેલ ક્રેડિટ ઓપ્ટિમાઇઝેશન તકનીકો અને વૈકલ્પિક ભંડોળ વ્યૂહરચનાઓ શોધો.",
+      advancedUtilization: "એડવાન્સ્ડ ક્રેડિટ ઉપયોગ",
+      debtManagement: "વ્યૂહાત્મક દેવું વ્યવસ્થાપન",
+      alternativeFunding: "વૈકલ્પિક ભંડોળ સ્ત્રોત",
+      startLearning: "શીખવાનું શરૂ કરો",
+      ctaTitle: "તમારી ક્રેડિટ પ્રોફાઇલને બદલવા માટે તૈયાર છો?",
+      ctaDescription: "હજારો મહિલા ઉદ્યોગસાહસિકો સાથે જોડાઓ જેમણે તેમની ક્રેડિટમાં સુધારો કર્યો છે અને તેમને મળવાપાત્ર ભંડોળ મેળવ્યું છે.",
+      getFreeEvaluation: "તમારું મફત ક્રેડિટ મૂલ્યાંકન મેળવો"
     }
   },
   tamil: {
     navbar: {
       financing: "நிதியளிப்பு",
-      credit: "கடன் மதிப்பீடு",
-      academy: "அகாடமி",
-      about: "எங்களைப் பற்றி",
+      credit: "கடன்",
+      academy: "கல்வி மையம்",
+      about: "எங்களை பற்றி",
       signin: "உள்நுழைக",
       getStarted: "தொடங்குங்கள்"
     },
-    hero: {
-      title: "நிதி சுதந்திரம்",
-      subtitle: "ஒவ்வொரு பெண்ணுக்கும்",
-      description: "எம்பவர்ஹெர் நிதி மாற்று நிதியளிப்பு, AI-சக்தி வாய்ந்த கடன் மதிப்பீடு மற்றும் நடைமுறை நிதிக் கல்வி மூலம் பெண் தொழில்முனைவோருக்கான தடைகளை அகற்றுகிறது.",
-      cta: "உங்கள் பயணத்தைத் தொடங்குங்கள்",
-      learnMore: "மேலும் அறிய"
-    },
-    stats: {
-      title: "எங்களின் தாக்கம்",
-      description: "நிதி உள்ளடக்கம் மற்றும் ஆதரவு மூலம் உலகளவில் பெண் தொழில்முனைவோரை அதிகாரப்படுத்துதல்."
-    },
-    features: {
-      title: "எங்களின் மூன்று தூண்கள்",
-      description: "எம்பவர்ஹெர் நிதி பெண் தொழில்முனைவோர் எதிர்கொள்ளும் தனித்துவமான சவால்களை முழுமையாகத் தீர்க்க வடிவமைக்கப்பட்ட மூன்று இணைக்கப்பட்ட தூண்களின் அடிப்படையில் உருவாக்கப்பட்டுள்ளது.",
-      financing: {
-        title: "மாற்று நிதியளிப்பு மையம்",
-        description: "உங்களின் தனித்துவமான வணிகத் தேவைகளுக்கு ஏற்ப நெகிழ்வான, பாரம்பரியமற்ற நிதி விருப்பங்களை அணுகவும்."
-      },
-      credit: {
-        title: "AI-சக்தி வாய்ந்த கடன் மதிப்பீடு",
-        description: "பாரபட்சமான கடன் மதிப்பீடுகளை எங்களின் நியாயமான, தரவு-இயக்கப்படும் மதிப்பெண் அமைப்புடன் மாற்றவும்."
-      },
-      academy: {
-        title: "நிதி கல்வியறிவு அகாடமி",
-        description: "நிதியை நிர்வகிக்கவும் உங்கள் வணிகத்தை விரிவுபடுத்தவும் நடைமுறை திறன்களுடன் உங்களை தயாராக்கிக் கொள்ளுங்கள்."
-      }
-    },
-    testimonials: {
-      title: "வெற்றிக் கதைகள்",
-      description: "எம்பவர்ஹெர் நிதியுடன் தங்கள் வணிகங்களை மாற்றியமைத்த பெண் தொழில்முனைவோரைச் சந்திக்கவும்."
-    },
     cta: {
-      title: "உங்கள் நிதி எதிர்காலத்தை மாற்ற தயாரா?",
-      description: "செழிக்க தேவையான மூலதனம், அறிவு மற்றும் சமூகத்தை அணுகும் ஆயிரக்கணக்கான பெண் தொழில்முனைவோருடன் இணையுங்கள்.",
+      title: "இன்றே உங்கள் வணிக திறனை திறக்கவும்",
+      description: "எங்கள் தளத்துடன் தங்கள் வணிகங்களை மாற்றியமைத்த ஆயிரக்கணக்கான பெண் தொழில் முனைவோருடன் இணையுங்கள்.",
       financing: "நிதியளிப்புக்கு விண்ணப்பிக்கவும்",
-      academy: "அகாடமியை ஆராயுங்கள்"
+      academy: "எங்கள் கல்வி மையத்தில் சேருங்கள்"
     },
-    academy: {
-      title: "எம்பவர்ஹெர்",
-      subtitle: "அகாடமி",
-      description: "குறிப்பாக பெண் தொழில்முனைவோருக்காக வடிவமைக்கப்பட்ட, எங்கள் படிப்புகள் வணிகத்தில் வெற்றி பெற தேவையான நிதி அறிவு மற்றும் திறன்களை உருவாக்க உதவும்.",
-      exploreCourses: "படிப்புகளை ஆராயுங்கள்",
-      beginnerCourses: "துவக்க படிப்புகள்",
-      beginnerDescription: "புதிய தொழில்முனைவோருக்காக வடிவமைக்கப்பட்ட எங்களின் அடிப்படை படிப்புகளுடன் உங்கள் பயணத்தைத் தொடங்குங்கள்.",
-      advancedCourses: "மேம்பட்ட படிப்புகள்",
-      advancedDescription: "எங்களின் சிறப்பு மேம்பட்ட படிப்புகளுடன் உங்கள் வணிகத்தை அடுத்த நிலைக்கு எடுத்துச் செல்லுங்கள்.",
-      mentorship: {
-        title: "1:1 வழிகாட்டல்",
-        description: "உங்கள் காலணியில் இருந்த அனுபவம் வாய்ந்த பெண் தொழில்முனைவோருடன் இணையுங்கள். எங்கள் வழிகாட்டல் திட்டம் உங்களை உங்களின் தனித்துவமான சவால்களைப் புரிந்து கொள்ளும் வணிகத் தலைவர்களுடன் இணைக்கிறது.",
-        feature1: "உங்கள் வணிகத் தேவைகளுக்கு ஏற்ப தனிப்பயனாக்கப்பட்ட வழிகாட்டல்",
-        feature2: "உங்கள் அர்ப்பணிப்பு மிக்க வழிகாட்டியுடன் மாதாந்திர 1:1 அமர்வுகள்",
-        feature3: "வெற்றிகரமான தொழில்முனைவோரின் எங்களின் பிரத்யேக வலைப்பின்னலுக்கான அணுகல்",
-        cta: "வழிகாட்டலுக்கு விண்ணப்பிக்கவும்"
-      },
-      readyToGrow: "உங்கள் நிதி அறிவை வளர்க்க தயாரா?",
-      joinThousands: "எங்கள் அகாடமி மூலம் தங்கள் வணிகங்களை மாற்றிய ஆயிரக்கணக்கான பெண் தொழில்முனைவோருடன் இணையுங்கள்.",
-      createAccount: "உங்கள் இலவச கணக்கை உருவாக்குங்கள்"
-    },
-    chatbot: {
-      title: "நிதி உதவியாளர்",
-      placeholder: "நிதியளிப்பு அல்லது எங்கள் சேவைகள் பற்றி எதையும் கேளுங்கள்...",
-      send: "அனுப்பு",
-      startMessage: "வணக்கம்! நான் உங்கள் எம்பவர்ஹெர் நிதி உதவியாளர். இன்று நான் உங்களுக்கு எவ்வாறு உதவ முடியும்?"
+    // Tamil credit evaluation translations
+    creditEval: {
+      heroTitle1: "கடனை மறுவரையறை",
+      heroTitle2: "பெண் தொழில் முனைவோருக்காக",
+      heroDescription: "எங்களின் AI-சக்தியால் இயக்கப்படும் கடன் மதிப்பீட்டு அமைப்பு பெண்களுக்கு சொந்தமான வணிகங்களின் உண்மையான திறனை அங்கீகரிக்க பாரம்பரிய அளவீடுகளுக்கு அப்பால் பார்க்கிறது.",
+      getEvaluation: "உங்கள் கடன் மதிப்பீட்டைப் பெறுங்கள்",
+      learnHow: "இது எவ்வாறு செயல்படுகிறது என்பதைக் கற்றுக்கொள்ளுங்கள்",
+      formTitle: "வணிக கடன் மதிப்பீடு",
+      formDescription: "உங்கள் தனிப்பயனாக்கப்பட்ட வணிக கடன் மதிப்பெண் மற்றும் பரிந்துரைகளைப் பெற கீழே உள்ள படிவத்தை நிரப்பவும்.",
+      businessDetails: "வணிக விவரங்கள்",
+      allFieldsRequired: "துல்லியமான மதிப்பீட்டிற்கு அனைத்து புலங்களும் தேவை",
+      businessName: "வணிக பெயர்",
+      businessNamePlaceholder: "உங்கள் வணிகத்தின் பெயரை உள்ளிடவும்",
+      yearsInBusiness: "வணிகத்தில் ஆண்டுகள்",
+      yearsInBusinessPlaceholder: "எ.கா., 2",
+      monthlyRevenue: "மாதாந்திர வருவாய் (USD)",
+      monthlyRevenuePlaceholder: "எ.கா., 10000",
+      businessType: "வணிக வகை/தொழில்துறை",
+      businessTypePlaceholder: "எ.கா., சில்லறை, தொழில்நுட்பம், உணவு சேவை",
+      existingLoans: "தற்போதைய கடன்களின் எண்ணிக்கை",
+      existingLoansPlaceholder: "எ.கா., 1",
+      calculating: "கணக்கிடுகிறது...",
+      calculateScore: "கடன் மதிப்பெண்ணைக் கணக்கிடு",
+      yourScore: "உங்கள் வணிக கடன் மதிப்பெண்",
+      scoreDescription: "உங்கள் வணிகத்தின் சாத்தியக்கூறுகளின் முழுமையான மதிப்பீட்டின் அடிப்படையில்",
+      awaitingData: "தரவு இன்னும் இல்லை",
+      fillFormPrompt: "உங்கள் கடன் மதிப்பீட்டைப் பார்க்க தயவுசெய்து படிவத்தை நிறைவு செய்யவும்",
+      scoreRangeInfo: "கடன் மதிப்பெண்கள் 300 முதல் 850 வரை இருக்கும்",
+      downloadReport: "முழு அறிக்கையைப் பதிவிறக்கவும்",
+      howItWorks: "எங்கள் மதிப்பீடு எவ்வாறு செயல்படுகிறது",
+      howItWorksDescription: "பாரம்பரிய வங்கிகள் பெரும்பாலும் கவனிக்காத தரவுப் புள்ளிகளைப் பயன்படுத்தி உங்கள் வணிகத்தின் சாத்தியக்கூறுகளை நாங்கள் மதிப்பிடுகிறோம்.",
+      holisticReview: "முழுமையான நிதி மதிப்பாய்வு",
+      holisticReviewDescription: "நாங்கள் கடன் மதிப்பெண்கள் மற்றும் பிணையங்கள் மட்டுமல்லாமல், உங்கள் பண ஓட்ட முறைகள், வருவாய் நிலைத்தன்மை மற்றும் வளர்ச்சிப் பாதை ஆகியவற்றை பகுப்பாய்வு செய்கிறோம்.",
+      potentialAssessment: "வணிக சாத்தியக்கூறுகள் மதிப்பீடு",
+      potentialAssessmentDescription: "உங்கள் வளர்ச்சித் திறனைப் புரிந்துகொள்ள எங்கள் AI உங்கள் வணிக மாதிரி, சந்தை வாய்ப்பு மற்றும் போட்டி நன்மைகளை மதிப்பிடுகிறது.",
+      characterCapability: "குணம் மற்றும் திறன்",
+      characterCapabilityDescription: "உங்கள் தொழில்முனைவோர் அனுபவம், தகவமைப்பு திறன் மற்றும் உங்கள் வணிக வெற்றிக்கான உங்கள் உறுதிப்பாட்டை நாங்கள் கருத்தில் கொள்கிறோம்.",
+      academy: "கடன் கல்வி மையம்",
+      academyDescription: "எங்கள் கல்வி வளங்களுடன் உங்கள் அறிவை உருவாக்கி உங்கள் கடன் சுயவிவரத்தை மேம்படுத்தவும்.",
+      fundamentals: "கடன் அடிப்படைகள்",
+      forBeginners: "தொடக்கநிலையினருக்கு",
+      fundamentalsDescription: "கடனின் அடிப்படைகள், மதிப்பெண் எவ்வாறு செயல்படுகிறது மற்றும் உங்கள் வணிக கடன் சுயவிவரத்தை மேம்படுத்த எளிய உத்திகளை கற்றுக்கொள்ளுங்கள்.",
+      understandingReports: "கடன் அறிக்கைகளைப் புரிந்துகொள்வது",
+      buildingCredit: "வணிக கடன் உருவாக்குதல்",
+      repairStrategies: "கடன் சீரமைப்பு உத்திகள்",
+      advanced: "மேம்பட்ட கடன் உத்திகள்",
+      forGrowing: "வளர்ந்து வரும் வணிகங்களுக்காக",
+      advancedDescription: "உங்கள் வளரும் வணிகத்திற்கான நுணுக்கமான கடன் உகப்பாக்க நுட்பங்கள் மற்றும் மாற்று நிதி உத்திகளைக் கண்டறியுங்கள்.",
+      advancedUtilization: "மேம்பட்ட கடன் பயன்பாடு",
+      debtManagement: "உத்திசார் கடன் மேலாண்மை",
+      alternativeFunding: "மாற்று நிதி ஆதாரங்கள்",
+      startLearning: "கற்கத் தொடங்குங்கள்",
+      ctaTitle: "உங்கள் கடன் சுயவிவரத்தை மாற்றத் தயாரா?",
+      ctaDescription: "ஆயிரக்கணக்கான பெண் தொழில் முனைவோருடன் இணையுங்கள், அவர்கள் தங்கள் கடனை மேம்படுத்தி, தாங்கள் தகுதியுள்ள நிதியைப் பெற்றுள்ளனர்.",
+      getFreeEvaluation: "உங்கள் இலவச கடன் மதிப்பீட்டைப் பெறுங்கள்"
     }
   }
 };
