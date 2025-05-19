@@ -2,8 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, CheckCircle } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+  
   const scrollToFeatures = () => {
     document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -17,22 +20,21 @@ const HeroSection = () => {
           <div className="lg:col-span-6">
             <div className="max-w-md mx-auto lg:mx-0 lg:max-w-lg">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                <span className="block">Financial freedom</span>
-                <span className="block gradient-text">for every woman</span>
+                <span className="block">{t('hero.title')}</span>
+                <span className="block gradient-text">{t('hero.subtitle')}</span>
               </h1>
               <p className="mt-6 text-lg text-gray-600">
-                EmpowerHer Finance is dismantling barriers for women entrepreneurs through alternative financing, 
-                AI-powered credit evaluation, and practical financial education.
+                {t('hero.description')}
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Button className="bg-gradient-to-r from-empowerher-500 to-coral-500 hover:from-empowerher-600 hover:to-coral-600 text-white text-lg py-6 px-8 rounded-xl shadow-md hover:shadow-lg transition-all">
-                  Start Your Journey
+                  {t('hero.cta')}
                 </Button>
                 <button 
                   onClick={scrollToFeatures} 
                   className="flex items-center text-empowerher-600 hover:text-empowerher-700 font-medium transition-colors"
                 >
-                  Learn More
+                  {t('hero.learnMore')}
                   <ArrowDown className="ml-2 h-4 w-4" />
                 </button>
               </div>

@@ -2,12 +2,15 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { DollarSign, Users, Book } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeatureSection = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
-      title: "Alternative Financing Hub",
-      description: "Access flexible, non-traditional funding options tailored to your unique business needs.",
+      title: t('features.financing.title'),
+      description: t('features.financing.description'),
       icon: <DollarSign className="h-6 w-6" />,
       items: [
         "Crowdfunding Marketplace with Impact Story Builder",
@@ -16,8 +19,8 @@ const FeatureSection = () => {
       ]
     },
     {
-      title: "AI-Powered Credit Evaluation",
-      description: "Replace biased credit assessments with our equitable, data-driven scoring system.",
+      title: t('features.credit.title'),
+      description: t('features.credit.description'),
       icon: <Users className="h-6 w-6" />,
       items: [
         "Alternative data integration from mobile money and e-commerce",
@@ -26,8 +29,8 @@ const FeatureSection = () => {
       ]
     },
     {
-      title: "Financial Literacy Academy",
-      description: "Equip yourself with practical skills to manage finances and scale your business.",
+      title: t('features.academy.title'),
+      description: t('features.academy.description'),
       icon: <Book className="h-6 w-6" />,
       items: [
         "Personalized learning paths with microlearning videos",
@@ -42,10 +45,10 @@ const FeatureSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our Three Pillars
+            {t('features.title')}
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            EmpowerHer Finance is built on three interconnected pillars designed to holistically address the unique challenges faced by women entrepreneurs.
+            {t('features.description')}
           </p>
         </div>
 
