@@ -16,31 +16,25 @@ interface Message {
 const FinanceChatbot = () => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      content: t('chatbot.startMessage'),
-      sender: 'bot',
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
+  // Initialize with welcome message when component mounts or language changes
+  useEffect(() => {
+    setMessages([
+      {
+        content: t('chatbot.startMessage'),
+        sender: 'bot',
+        timestamp: new Date()
+      }
+    ]);
+  }, [t]);
+
   // Auto-scroll to bottom of messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
-  // Update welcome message when language changes
-  useEffect(() => {
-    setMessages(prev => [
-      {
-        ...prev[0],
-        content: t('chatbot.startMessage')
-      },
-      ...prev.slice(1)
-    ]);
-  }, [t]);
 
   const handleSendMessage = () => {
     if (!input.trim()) return;
