@@ -13,7 +13,10 @@ export const translations = {
     title: "Financial Empowerment for Women Entrepreneurs",
     subtitle: "Access loans, build credit, and grow your business with customized financial solutions.",
     ctaPrimary: "Apply for Financing",
-    ctaSecondary: "Learn More"
+    ctaSecondary: "Learn More",
+    description: "We provide tailored financial services designed specifically for women-led businesses.",
+    cta: "Get Started Today",
+    learnMore: "Learn More"
   },
   features: {
     title: "Empowering Your Business Journey",
