@@ -28,7 +28,7 @@ const HeroSection = () => {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Button className="bg-gradient-to-r from-empowerher-500 to-coral-500 hover:from-empowerher-600 hover:to-coral-600 text-white text-lg py-6 px-8 rounded-xl shadow-md hover:shadow-lg transition-all">
-                  {t('hero.ctaPrimary')}
+                  {t('hero.cta')}
                 </Button>
                 <button 
                   onClick={scrollToFeatures} 
