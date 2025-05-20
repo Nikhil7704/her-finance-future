@@ -13,8 +13,16 @@ interface Message {
   timestamp: Date;
 }
 
+// Define finance topics and responses
+interface FinanceTopics {
+  [key: string]: {
+    keywords: string[];
+    response: string;
+  }
+}
+
 const FinanceChatbot = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
@@ -36,6 +44,42 @@ const FinanceChatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // Finance knowledge base
+  const financeTopics: FinanceTopics = {
+    loan: {
+      keywords: ['loan', 'borrow', 'financing', 'mortgage', 'debt', 'interest', 'emi', 'repayment'],
+      response: t('chatbot.responses.loanDetailed')
+    },
+    credit: {
+      keywords: ['credit', 'score', 'cibil', 'report', 'history', 'bureau'],
+      response: t('chatbot.responses.creditDetailed')
+    },
+    savings: {
+      keywords: ['save', 'savings', 'deposit', 'investment', 'returns', 'interest'],
+      response: t('chatbot.responses.savingsDetailed')
+    },
+    business: {
+      keywords: ['business', 'startup', 'entrepreneur', 'company', 'venture', 'msme'],
+      response: t('chatbot.responses.businessDetailed')
+    },
+    academy: {
+      keywords: ['course', 'learn', 'study', 'academy', 'education', 'training', 'workshop'],
+      response: t('chatbot.responses.academyDetailed')
+    },
+    mentor: {
+      keywords: ['mentor', 'guidance', 'advisor', 'coach', 'consultant', 'expert'],
+      response: t('chatbot.responses.mentorDetailed')
+    },
+    insurance: {
+      keywords: ['insurance', 'policy', 'coverage', 'claim', 'premium', 'risk', 'protection'],
+      response: t('chatbot.responses.insuranceDetailed')
+    },
+    tax: {
+      keywords: ['tax', 'taxation', 'income tax', 'gst', 'filing', 'return', 'deduction'],
+      response: t('chatbot.responses.taxDetailed')
+    }
+  };
+
   const handleSendMessage = () => {
     if (!input.trim()) return;
     
@@ -49,7 +93,7 @@ const FinanceChatbot = () => {
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     
-    // Simulate bot response (in a real app, you'd call an API here)
+    // Generate bot response with enhanced logic
     setTimeout(() => {
       const botResponse = getBotResponse(input);
       setMessages(prev => [...prev, {
@@ -57,24 +101,53 @@ const FinanceChatbot = () => {
         sender: 'bot',
         timestamp: new Date()
       }]);
-    }, 1000);
+    }, 800);
   };
   
-  // Basic response system - in a real app, you'd use a proper NLP service
+  // Enhanced response system
   const getBotResponse = (query: string): string => {
     const lowerQuery = query.toLowerCase();
     
-    if (lowerQuery.includes('loan') || lowerQuery.includes('financing')) {
-      return t('chatbot.responses.financing');
-    } else if (lowerQuery.includes('credit') || lowerQuery.includes('score')) {
-      return t('chatbot.responses.credit');
-    } else if (lowerQuery.includes('course') || lowerQuery.includes('learn') || lowerQuery.includes('academy')) {
-      return t('chatbot.responses.academy');
-    } else if (lowerQuery.includes('mentor') || lowerQuery.includes('guidance')) {
-      return t('chatbot.responses.mentor');
-    } else {
-      return t('chatbot.responses.default');
+    // Check for greetings
+    if (/^(hi|hello|hey|greetings|namaste|hola)/i.test(lowerQuery)) {
+      return `${t('chatbot.responses.greeting')} ${t('chatbot.responses.helpPrompt')}`;
     }
+
+    // Check for thank you
+    if (/thank|thanks|thx|appreciate|grateful/i.test(lowerQuery)) {
+      return t('chatbot.responses.thankYou');
+    }
+
+    // Check for goodbye
+    if (/bye|goodbye|see you|talk later|later|exit|quit/i.test(lowerQuery)) {
+      return t('chatbot.responses.goodbye');
+    }
+
+    // Check for help request
+    if (/help|assist|support|guide/i.test(lowerQuery)) {
+      return t('chatbot.responses.helpDetailed');
+    }
+
+    // Check for contact request
+    if (/contact|speak|talk|call|phone|email|reach/i.test(lowerQuery)) {
+      return t('chatbot.responses.contactInfo');
+    }
+
+    // Check for specific finance topics
+    for (const topic in financeTopics) {
+      const { keywords, response } = financeTopics[topic];
+      if (keywords.some(keyword => lowerQuery.includes(keyword))) {
+        return response;
+      }
+    }
+    
+    // Check for questions about the platform
+    if (/who are you|what (is|are) (this|you)|about|platform|website|app/i.test(lowerQuery)) {
+      return t('chatbot.responses.aboutPlatform');
+    }
+
+    // Default response with suggestions
+    return `${t('chatbot.responses.default')} ${t('chatbot.responses.suggestions')}`;
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -89,6 +162,7 @@ const FinanceChatbot = () => {
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-gradient-to-r from-empowerher-500 to-coral-500 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-50"
+        aria-label={t('chatbot.openChat')}
       >
         <MessageCircle size={24} />
       </button>
