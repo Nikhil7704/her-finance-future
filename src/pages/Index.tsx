@@ -7,6 +7,7 @@ import FeatureSection from '@/components/FeatureSection';
 import TestimonialSection from '@/components/TestimonialSection';
 import StatsSection from '@/components/StatsSection';
 import CtaSection from '@/components/CtaSection';
+import FinanceChatbot from '@/components/FinanceChatbot';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <FeatureSection />
         <TestimonialSection />
         <CtaSection />
+        <FinanceChatbot />
       </main>
       <Footer />
     </div>

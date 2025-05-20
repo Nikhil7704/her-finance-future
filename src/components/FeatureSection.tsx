@@ -13,9 +13,9 @@ const FeatureSection = () => {
       description: t('features.financing.description'),
       icon: <DollarSign className="h-6 w-6 text-empowerher-600" />,
       items: [
-        "Crowdfunding Marketplace with Impact Story Builder",
-        "Revenue-Based Financing with dynamic repayment rates",
-        "Community Credit Circles leveraging social capital"
+        t('features.financing.item1'),
+        t('features.financing.item2'),
+        t('features.financing.item3')
       ]
     },
     {
@@ -23,9 +23,9 @@ const FeatureSection = () => {
       description: t('features.credit.description'),
       icon: <Users className="h-6 w-6 text-empowerher-600" />,
       items: [
-        "Alternative data integration from mobile money and e-commerce",
-        "Bias mitigation with explainable AI and fairness audits",
-        "Dynamic credit scoring that updates in real-time"
+        t('features.credit.item1'),
+        t('features.credit.item2'),
+        t('features.credit.item3')
       ]
     },
     {
@@ -33,9 +33,9 @@ const FeatureSection = () => {
       description: t('features.academy.description'),
       icon: <Book className="h-6 w-6 text-empowerher-600" />,
       items: [
-        "Personalized learning paths with microlearning videos",
-        "AI Chatbot Mentor via WhatsApp and Telegram",
-        "Mentorship network with industry experts"
+        t('features.academy.item1'),
+        t('features.academy.item2'),
+        t('features.academy.item3')
       ]
     }
   ];

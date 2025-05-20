@@ -71,15 +71,15 @@ const FinanceChatbot = () => {
     const lowerQuery = query.toLowerCase();
     
     if (lowerQuery.includes('loan') || lowerQuery.includes('financing')) {
-      return "We offer various financing options tailored for women entrepreneurs. Our alternative financing models include revenue-based financing, community credit circles, and crowdfunding options. Visit our Financing page to learn more and apply.";
+      return t('chatbot.responses.financing');
     } else if (lowerQuery.includes('credit') || lowerQuery.includes('score')) {
-      return "Our AI-powered credit evaluation system looks beyond traditional metrics to provide fair assessment for women entrepreneurs. We consider alternative data points like mobile money transactions, e-commerce performance, and social capital.";
+      return t('chatbot.responses.credit');
     } else if (lowerQuery.includes('course') || lowerQuery.includes('learn') || lowerQuery.includes('academy')) {
-      return "Our Academy offers courses for entrepreneurs at every level. From financial literacy basics to advanced credit optimization strategies. Check out our Academy page to browse all available courses.";
+      return t('chatbot.responses.academy');
     } else if (lowerQuery.includes('mentor') || lowerQuery.includes('guidance')) {
-      return "Our 1:1 mentorship program pairs you with experienced women entrepreneurs who understand your unique challenges. Apply through our Academy page to be matched with a mentor.";
+      return t('chatbot.responses.mentor');
     } else {
-      return "I'm here to answer questions about EmpowerHer's financial services, credit evaluation, and educational resources. How can I help you today?";
+      return t('chatbot.responses.default');
     }
   };
 
